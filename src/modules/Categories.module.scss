@@ -4,12 +4,24 @@
   border-bottom: 1px solid #EDEDED;
   padding-top: 20px;
   padding-bottom: 20px;
+  @media (max-width: 576px) {
+    display: none;
+  }
   nav {
     ul {
       display: flex;
       justify-content: space-between;
       gap: 100px;
-      padding-inline: 250px;
+      @media (max-width: 1440px) {
+        gap: 50px;
+      }
+      @media (max-width: 1168px) {
+        gap: 0;
+      }
+      @media (max-width: 768px) {
+        gap: 0;
+      }
+
       li {
         cursor: pointer;
         background-color: #F3F9FB;;
@@ -20,6 +32,14 @@
         transition: 0.2s;
         &:hover {
           background-color: #008ECC;
+        }
+        @media (max-width: 1168px) {
+          font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 10px;
+          white-space: nowrap;
         }
       }
     }

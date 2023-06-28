@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import classes from "../modules/Categories.module.scss";
+import layout from '../modules/Layout.module.scss'
 
-const Categories = (props) =>  {
+const Categories = () =>  {
 	const [categories, setCategories] = useState([
 		"electronics",
 		"jewelery",
@@ -17,7 +18,7 @@ const Categories = (props) =>  {
 
 
 	return <>
-		<section className={classes['categories-wrapper']}>
+		<section className={`${classes['categories-wrapper']} ${layout['container']}`}>
 			<nav>
 				<ul>
 					{categories.map((category, index) => (
