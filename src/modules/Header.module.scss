@@ -1,0 +1,64 @@
+.above-header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 250px;
+  background-color: #F5F5F5;
+  align-items: center;
+  height: 42px;
+  .welcome-wrapper {
+
+  }
+  .links-bar {
+    ul {
+      display: flex;
+      gap: 20px;
+      li {
+        display: flex;
+        gap: 14px;
+        span {
+          color: #666;
+          text-align: right;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 250px;
+  padding-top: 22px;
+  .logo {
+    figure {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      img {
+        width: 56px;
+      }
+      h1 {
+        text-transform: uppercase;
+        color: #008ECC;
+      }
+    }
+  }
+  .cart-wrapper {
+    figure {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      h2 {
+        padding-top: 4px;
+        color: #666;
+        font-weight: 700;
+        line-height: 18px;
+        font-size: 20px;
+      }
+    }
+  }
+}
