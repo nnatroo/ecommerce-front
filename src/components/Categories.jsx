@@ -2,7 +2,12 @@ import React, {useEffect, useState} from 'react';
 import classes from "../modules/Categories.module.scss";
 
 const Categories = (props) =>  {
-	const [categories, setCategories] = useState([]);
+	const [categories, setCategories] = useState([
+		"electronics",
+		"jewelery",
+		"men's clothing",
+		"women's clothing"
+	]);
 
 	useEffect(() => {
 		fetch('https://fakestoreapi.com/products/categories')
