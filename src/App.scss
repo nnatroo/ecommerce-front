@@ -1,0 +1,39 @@
+$primaryFont: "Montserrat", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $primaryFont;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+::selection {
+  background-color: #ef5555;
+  color: #fff;
+}
+
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+img {
+  user-drag: none; /* Disable dragging of the image in some browsers */
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
