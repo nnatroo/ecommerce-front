@@ -4,6 +4,7 @@ import Footer from "../components/Footer.jsx";
 import {useEffect, useState} from "react";
 import classes from "../modules/Products.module.scss";
 import layout from "../modules/Layout.module.scss";
+import {Link} from "react-router-dom";
 
 const Products = () =>  {
 
@@ -24,12 +25,12 @@ const Products = () =>  {
         <Categories />
         <div className={`${classes['products-list']} ${layout['container']}`}>
             {products.map((product, index) => (
-                <a onClick={() => clickHandler(product)} key={index} className={`${classes['product-wrapper']} ${layout['container']}`}>
+                <Link to={`/product/${product.id}`} onClick={() => clickHandler(product)} key={index} className={`${classes['product-wrapper']} ${layout['container']}`}>
                     <img src={product.image} alt="" />
                     <span>{product.category}</span>
                     <h2>{product.title.slice(0, 30)}...</h2>
                     <h3>{product.price} $</h3>
-                </a>
+                </Link>
             ))}
         </div>
         <Footer />
