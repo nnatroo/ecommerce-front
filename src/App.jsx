@@ -1,21 +1,20 @@
 import './App.scss'
-import Header from "./components/Header.jsx";
-import Categories from "./components/Categories.jsx";
-import Hero from "./components/Hero.jsx";
-import Popular from "./components/Popular.jsx";
-import Deals from "./components/Deals.jsx";
-import Footer from "./components/Footer.jsx";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from "./pages/Home.jsx";
+import Contact from "./pages/Contact.jsx";
+import Products from "./pages/Products.jsx";
 
 function App() {
 
   return (
     <>
-        <Header />
-        <Categories />
-        <Hero />
-        <Popular />
-        <Deals />
-        <Footer />
+        <Router>
+            <Routes>
+                <Route path='/' element={<Home />}  />
+                <Route path='/products' element={<Products />}  />
+                <Route path='/contact' element={<Contact />}  />
+            </Routes>
+        </Router>
     </>
   )
 }
