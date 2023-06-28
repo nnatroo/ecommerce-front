@@ -60,6 +60,8 @@
     }
   }
   .cart-wrapper {
+    display: flex;
+    gap: 20px;
     figure {
       display: flex;
       gap: 10px;
