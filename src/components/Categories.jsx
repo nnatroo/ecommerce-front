@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import classes from "../modules/Categories.module.scss";
 import layout from '../modules/Layout.module.scss'
 import {Fade} from "react-awesome-reveal";
+import {Link} from "react-router-dom";
 
 const Categories = () =>  {
 	const [categories, setCategories] = useState([
@@ -24,7 +25,11 @@ const Categories = () =>  {
 				<nav>
 					<ul>
 						{categories.map((category, index) => (
-							<li key={index}>{category}</li>
+							<div key={index}>
+								<Link to={'/products'}>
+									<li >{category}</li>
+								</Link>
+							</div>
 						))}
 					</ul>
 				</nav>

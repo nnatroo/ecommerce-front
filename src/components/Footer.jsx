@@ -3,6 +3,7 @@ import layout from '../modules/Layout.module.scss'
 import down1 from '../assets/play-store.jpg'
 import down2 from '../assets/app-store.jpg'
 import {Fade} from "react-awesome-reveal";
+import {Link} from "react-router-dom";
 const Footer = () => {
 
     return <>
@@ -11,7 +12,9 @@ const Footer = () => {
 
                 <div className={`${layout['container']} ${classes['container']}`}>
                     <div className={classes['footer-contact']}>
-                        <h2>MegaMart</h2>
+                        <Link to={'/'}>
+                            <h2>The Jarba </h2>
+                        </Link>
                         <span>Download App</span>
                         <figure>
                             <img src={down1} alt=""/>
@@ -24,14 +27,30 @@ const Footer = () => {
                         <span>Most Popular Categories</span>
                         <nav>
                             <ul>
-                                <li>Staples</li>
-                                <li>Beverages</li>
-                                <li>Personal Care</li>
-                                <li>Home Care</li>
-                                <li>Baby Care</li>
-                                <li>Vegetables & Fruits</li>
-                                <li>Snacks & Foods</li>
-                                <li>Dairy & Bakery</li>
+                                <Link to={'/products'}>
+                                    <li>Staples</li>
+                                </Link>
+                                <Link to={'/products'}>
+                                    <li>Beverages</li>
+                                </Link>
+                                <Link to={'/products'}>
+                                    <li>Personal Care</li>
+                                </Link>
+                                <Link to={'/products'}>
+                                    <li>Home Care</li>
+                                </Link>
+                                <Link to={'/products'}>
+                                    <li>Baby Care</li>
+                                </Link>
+                                <Link to={'/products'}>
+                                    <li>Vegetables & Fruits</li>
+                                </Link>
+                                <Link to={'/products'}>
+                                    <li>Snacks & Foods</li>
+                                </Link>
+                                <Link to={'/products'}>
+                                    <li>Dairy & Bakery</li>
+                                </Link>
                             </ul>
                         </nav>
                     </div>
@@ -40,15 +59,15 @@ const Footer = () => {
                         <span>Customer Services</span>
                         <nav>
                             <ul>
-                                <li>About Us</li>
-                                <li>Terms & Conditions</li>
-                                <li>FAQ</li>
-                                <li>Privacy Policy</li>
-                                <li>E-waste Policy</li>
-                                <li>Cancellation & Return Policy</li>
+                                <Link to={'/contact'}><li>About Us</li></Link>
+                                <Link to={'/contact'}><li>Terms & Conditions</li></Link>
+                                <Link to={'/contact'}><li>FAQ</li></Link>
+                                <Link to={'/contact'}><li>Privacy Policy</li></Link>
+                                <Link to={'/contact'}><li>E-waste Policy</li></Link>
+                                <Link to={'/contact'}><li>Cancellation & Return Policy</li></Link>
                             </ul>
                         </nav>
-                    </div>
+                    </div>/
                 </div>
                 <div className={`${layout['container']} ${classes['under-footer-bar']}`}>
                     <span>© 2023 All rights reserved. Natro & Jarbare.</span>

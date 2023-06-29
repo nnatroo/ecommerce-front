@@ -26,7 +26,10 @@ const Deals = () => {
             <section className={`${classes['popular-wrapper']} ${layout['container']}`}>
                 <div className={classes['popular-top-bar']}>
                     <h3>Grab the best deal on <span>Products</span> </h3>
-                    <span>View All <img src={arrow} alt=""/></span>
+                    <Link to={'/products'}>
+                        <span>View All <img src={arrow} alt=""/></span>
+                    </Link>
+
                 </div>
                 <div className={classes['popular-list']}>
 

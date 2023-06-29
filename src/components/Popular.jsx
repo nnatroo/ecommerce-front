@@ -26,7 +26,10 @@ const Popular = () => {
             <section className={`${classes['popular-wrapper']} ${layout['container']}`}>
                 <div className={classes['popular-top-bar']}>
                     <h3>The most popular <span>Products</span> </h3>
-                    <span>View All <img src={arrow} alt=""/></span>
+                    <Link to={'/products'}>
+                        <span>View All <img src={arrow} alt=""/></span>
+                    </Link>
+
                 </div>
                 <div className={classes['popular-list']}>
 
