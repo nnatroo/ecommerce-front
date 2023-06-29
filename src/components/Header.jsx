@@ -49,6 +49,13 @@ const Header = () => {
 					</Link>
 				</div>
 				<div className={classes['cart-wrapper']}>
+					<Link to={`/contact`}>
+						<figure>
+							<img src={location} alt="cart"/>
+							<h2>Contact Us</h2>
+						</figure>
+					</Link>
+
 					<Link to={'/products'}>
 						<figure>
 							<img src={productsLogo} alt="cart"/>
@@ -56,7 +63,7 @@ const Header = () => {
 						</figure>
 					</Link>
 
-					<Link to={`cart`}>
+					<Link to={`/cart`}>
 						<figure>
 							<img src={cart} alt="cart"/>
 							<h2>Cart</h2>
