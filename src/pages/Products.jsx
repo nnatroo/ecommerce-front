@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import classes from "../modules/Products.module.scss";
 import layout from "../modules/Layout.module.scss";
 import {Link} from "react-router-dom";
+import {Fade} from "react-awesome-reveal";
 
 const Products = () =>  {
 
@@ -23,16 +24,18 @@ const Products = () =>  {
     return <>
         <Header />
         <Categories />
-        <div className={`${classes['products-list']} ${layout['container']}`}>
-            {products.map((product, index) => (
-                <Link to={`/product/${product.id}`} onClick={() => clickHandler(product)} key={index} className={`${classes['product-wrapper']} ${layout['container']}`}>
-                    <img src={product.image} alt="" />
-                    <span>{product.category}</span>
-                    <h2>{product.title.slice(0, 30)}...</h2>
-                    <h3>{product.price} $</h3>
-                </Link>
-            ))}
-        </div>
+        <Fade>
+            <div className={`${classes['products-list']} ${layout['container']}`}>
+                {products.map((product, index) => (
+                    <Link to={`/product/${product.id}`} onClick={() => clickHandler(product)} key={index} className={`${classes['product-wrapper']} ${layout['container']}`}>
+                        <img src={product.image} alt="" />
+                        <span>{product.category}</span>
+                        <h2>{product.title.slice(0, 30)}...</h2>
+                        <h3>{product.price} $</h3>
+                    </Link>
+                ))}
+            </div>
+        </Fade>
         <Footer />
     </>
 }

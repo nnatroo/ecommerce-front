@@ -7,6 +7,7 @@ import amex from '../assets/amex.svg'
 import mastercard from '../assets/mastercard.svg'
 import paypal from '../assets/paypal.svg'
 import visa from '../assets/visa.svg'
+import {Slide} from "react-awesome-reveal";
 
 const Cart = () => {
 
@@ -36,62 +37,65 @@ const Cart = () => {
 
     return <>
         <Header />
-        <section className={`${classes['cart-wrapper']} ${layout['container']}`}>
+        <Slide>
+            <section className={`${classes['cart-wrapper']} ${layout['container']}`}>
 
-            <div className={classes['cart-items-wrapper']}>
+                <div className={classes['cart-items-wrapper']}>
 
-                <div className={classes['header']}>
-                    <h2>MY BAG</h2>
-                    <span>Items are reserved for 60 minutes</span>
-                </div>
+                    <div className={classes['header']}>
+                        <h2>MY BAG</h2>
+                        <span>Items are reserved for 60 minutes</span>
+                    </div>
 
-                <hr/>
-
-                <div className={classes['cart-items']}>
-                    {allProducts.map((item, index) => (
-
-                        <div key={index}>
-                            {cartProductIds.includes(item.id) && <div className={classes['item']}>
-                                <figure>
-                                    <img src={item.image} alt=""/>
-                                </figure>
-                                <div className={classes['item-data']}>
-                                    <span className={classes['item-price']}>$ {item.price}</span>
-                                    <span className={classes['item-name']}>{item.title}</span>
-                                    <span className={classes['item-desc']}>{item.description.slice(0, 200)}...</span>
-                                    <span></span>
-                                    <hr/>
-                                </div>
-                            </div>}
-                        </div>
-                    ))}
-                </div>
-
-            </div>
-
-            <div className={classes['cart-checkout']}>
-                <div className={classes['checkout-header']}>
-                    <h2>TOTAL</h2>
                     <hr/>
-                    <button>
-                        CHECKOUT
-                    </button>
 
-                    <div className={classes['payment-info']}>
-                        <h3>WE ACCEPT:</h3>
-                        <figure>
-                            <img src={visa} alt=""/>
-                            <img src={mastercard} alt=""/>
-                            <img src={amex} alt=""/>
-                            <img src={paypal} alt=""/>
-                        </figure>
-                        <span>Got a discount code? <p>Add it in the next step.</p></span>
+                    <div className={classes['cart-items']}>
+                        {allProducts.map((item, index) => (
+
+                            <div key={index}>
+                                {cartProductIds.includes(item.id) && <div className={classes['item']}>
+                                    <figure>
+                                        <img src={item.image} alt=""/>
+                                    </figure>
+                                    <div className={classes['item-data']}>
+                                        <span className={classes['item-price']}>$ {item.price}</span>
+                                        <span className={classes['item-name']}>{item.title}</span>
+                                        <span>{item.description.slice(0, 200)}...</span>
+                                        <span></span>
+                                        <hr/>
+                                    </div>
+                                </div>}
+                            </div>
+                        ))}
                     </div>
 
                 </div>
-            </div>
 
-        </section>
+                <div className={classes['cart-checkout']}>
+                    <div className={classes['checkout-header']}>
+                        <h2>TOTAL</h2>
+                        <hr/>
+                        <button>
+                            CHECKOUT
+                        </button>
+
+                        <div className={classes['payment-info']}>
+                            <h3>WE ACCEPT:</h3>
+                            <figure>
+                                <img src={visa} alt=""/>
+                                <img src={mastercard} alt=""/>
+                                <img src={amex} alt=""/>
+                                <img src={paypal} alt=""/>
+                            </figure>
+                            <span>Got a discount code? <p>Add it in the next step.</p></span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </Slide>
+
         <Footer />
     </>;
 }

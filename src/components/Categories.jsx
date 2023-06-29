@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import classes from "../modules/Categories.module.scss";
 import layout from '../modules/Layout.module.scss'
+import {Fade} from "react-awesome-reveal";
 
 const Categories = () =>  {
 	const [categories, setCategories] = useState([
@@ -18,15 +19,18 @@ const Categories = () =>  {
 
 
 	return <>
-		<section className={`${classes['categories-wrapper']} ${layout['container']}`}>
-			<nav>
-				<ul>
-					{categories.map((category, index) => (
-						<li key={index}>{category}</li>
-					))}
-				</ul>
-			</nav>
-		</section>
+		<Fade>
+			<section className={`${classes['categories-wrapper']} ${layout['container']}`}>
+				<nav>
+					<ul>
+						{categories.map((category, index) => (
+							<li key={index}>{category}</li>
+						))}
+					</ul>
+				</nav>
+			</section>
+		</Fade>
+
 	</>
 };
 

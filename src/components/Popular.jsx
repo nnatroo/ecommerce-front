@@ -3,6 +3,7 @@ import layout from '../modules/Layout.module.scss'
 import arrow from '../assets/arrow.svg'
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import {Slide} from "react-awesome-reveal";
 const Popular = () => {
 
     const [popularProducts, setPopularProducts] = useState([])
@@ -21,23 +22,26 @@ const Popular = () => {
     }
 
     return <>
-        <section className={`${classes['popular-wrapper']} ${layout['container']}`}>
-            <div className={classes['popular-top-bar']}>
-                <h3>The most popular <span>Products</span> </h3>
-                <span>View All <img src={arrow} alt=""/></span>
-            </div>
-            <div className={classes['popular-list']}>
+        <Slide>
+            <section className={`${classes['popular-wrapper']} ${layout['container']}`}>
+                <div className={classes['popular-top-bar']}>
+                    <h3>The most popular <span>Products</span> </h3>
+                    <span>View All <img src={arrow} alt=""/></span>
+                </div>
+                <div className={classes['popular-list']}>
 
-                {popularProducts.map((item, index) => (
-                    <Link to={`product/${item.id}`} onClick={() => clickHandler(item)} key={index} className={classes['item-card']}>
-                        <img src={item.image} alt=""/>
-                        <span>{item.title.slice(0, 22)}...</span>
-                        <span>{item.price} $</span>
-                    </Link>
-                ))}
+                    {popularProducts.map((item, index) => (
+                        <Link to={`product/${item.id}`} onClick={() => clickHandler(item)} key={index} className={classes['item-card']}>
+                            <img src={item.image} alt=""/>
+                            <span>{item.title.slice(0, 22)}...</span>
+                            <span>{item.price} $</span>
+                        </Link>
+                    ))}
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </Slide>
+
     </>
 };
 
