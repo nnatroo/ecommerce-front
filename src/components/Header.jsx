@@ -15,7 +15,7 @@ const Header = () => {
 
 			<div className={`${classes['container']} ${layout['container']}`}>
 				<div>
-					<span>Welcome to worldwide Megamart!</span>
+					<span>Welcome to worldwide The Jarba Emporium!</span>
 				</div>
 
 				<div className={classes['links-bar']} >
@@ -43,7 +43,7 @@ const Header = () => {
 					<Link to={'/'}>
 						<figure>
 							<img src={logo} alt="logo"/>
-							<h1>the jarba emporiom</h1>
+							<h1>the jarba emporium</h1>
 						</figure>
 					</Link>
 				</div>
