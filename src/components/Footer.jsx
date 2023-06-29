@@ -67,7 +67,7 @@ const Footer = () => {
                                 <Link to={'/contact'}><li>Cancellation & Return Policy</li></Link>
                             </ul>
                         </nav>
-                    </div>/
+                    </div>
                 </div>
                 <div className={`${layout['container']} ${classes['under-footer-bar']}`}>
                     <span>© 2023 All rights reserved. Natro & Jarbare.</span>
