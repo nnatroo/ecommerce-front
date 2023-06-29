@@ -56,10 +56,13 @@ const Header = () => {
 						</figure>
 					</Link>
 
-					<figure>
-						<img src={cart} alt="cart"/>
-						<h2>Cart</h2>
-					</figure>
+					<Link to={`cart`}>
+						<figure>
+							<img src={cart} alt="cart"/>
+							<h2>Cart</h2>
+						</figure>
+					</Link>
+
 				</div>
 			</div>
 
