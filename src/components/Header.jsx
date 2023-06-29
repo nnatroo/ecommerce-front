@@ -7,7 +7,6 @@ import delivery from '../assets/delivery.svg'
 import discount from '../assets/discount.svg'
 import location from '../assets/location.svg'
 import {Link} from "react-router-dom";
-import React from "react";
 
 const Header = () => {
 
@@ -15,7 +14,7 @@ const Header = () => {
 		<section className={`${classes['above-header']}`}>
 
 			<div className={`${classes['container']} ${layout['container']}`}>
-				<div className={classes['welcome-wrapper']}>
+				<div>
 					<span>Welcome to worldwide Megamart!</span>
 				</div>
 
